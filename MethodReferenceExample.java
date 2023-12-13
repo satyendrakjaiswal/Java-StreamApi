@@ -19,7 +19,7 @@ public class MethodReferenceExample {
         List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
 
         // Lambda expression
-        names.forEach(name -> stringManipulator.printWithPrefix(name, "Mr."));
+        names.forEach(name -> stringManipulator.printWithPrefix(name));
 
         // Instance method reference
         names.forEach(stringManipulator::printWithPrefix);
@@ -34,7 +34,7 @@ public class MethodReferenceExample {
 }
 
 class StringManipulator {
-    public void printWithPrefix(String s, String prefix) {
-        System.out.println(prefix + " " + s);
+    public void printWithPrefix(String s) {
+        System.out.println("Hello! " + s);
     }
 }
